@@ -1,2 +1,2 @@
 # Content
-Code of AML exercises
+Code for AML exercises
