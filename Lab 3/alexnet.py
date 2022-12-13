@@ -92,8 +92,8 @@ class AlexNetDA(nn.Module):
         # logits output dim is num_domains
         features = ReverseLayerF.apply(features, alpha)
         return self.domain_classifier(features)
-
-    return self.classifier(features)
+    else:
+        return self.classifier(features)
 
 
   
