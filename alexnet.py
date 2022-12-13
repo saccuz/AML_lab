@@ -18,6 +18,9 @@ class AlexNet(nn.Module):
 
     def __init__(self, num_classes=1000):
         super(AlexNet, self).__init__()
+        #load weights
+        self.load_state_dict(load_state_dict_from_url(model_urls['alexnet']), strict=False)
+        
         self.features = nn.Sequential(
             nn.Conv2d(3, 64, kernel_size=11, stride=4, padding=2),
             nn.ReLU(inplace=True),
